@@ -2,7 +2,8 @@ import random
 import time
 import copy
 import colorama
-
+import platfrom
+import os
 
 
 
@@ -141,10 +142,13 @@ class Space:
 
     def clear_pre_verse(self, str_count):
         """Метод для удаления строк в програме, str_count - количество строк для удаления"""
-        for i in range(str_count):
-            # Символ '\033[F' переводит консольный курсор в начало строки
-            # Символ '\033[K' удаляет все символы справа от консольного курсора
-            print('\033[F\033[K', end='')
+        if platform.system() == "Windows":
+            os.system('cls')
+        else:
+            for i in range(str_count):
+                # Символ '\033[F' переводит консольный курсор в начало строки
+                # Символ '\033[K' удаляет все символы справа от консольного курсора
+                print('\033[F\033[K', end='')
 
 
 def main():
