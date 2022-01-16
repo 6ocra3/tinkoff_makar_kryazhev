@@ -2,7 +2,7 @@ import random
 import time
 import copy
 import colorama
-import platfrom
+import platform
 import os
 
 
