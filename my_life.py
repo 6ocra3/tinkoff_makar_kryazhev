@@ -1,7 +1,6 @@
 import random
 import time
 import copy
-import colorama
 import platform
 import os
 
@@ -156,7 +155,6 @@ def main():
     Наша основная функция main, тут происходит инициализация нашей вселеной и ее реинкарнация.
     Если вселенная окажется статичной то перерождение прекратится и выведется соответсвующее сообщеие
     """
-    colorama.init()
     print("Если хотите задать своё поле для игры введите 0, иначе 1")
     input_type = input()
     universe = Space(input_type)
